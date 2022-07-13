@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'web.apps.WebConfig',
+    'bootstrap3',
 ]
 
 MIDDLEWARE = [
@@ -134,5 +134,11 @@ MEDIA_ROOT = f'{BASE_DIR} / static/img'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+GOOGLE_APPLICATION_CREDENTIALS = BASE_DIR + '\gcloud.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = GOOGLE_APPLICATION_CREDENTIALS
+DEFAULT_FILE_STORAGE='storages.backends.gcloud.GoogleCloudStorage'
+GS_BUCKET_NAME='cepad_site'
+STATICFILES_STORAGE='storages.backends.gcloud.GoogleCloudStorage'
 
 

@@ -7,6 +7,10 @@ web/__pycache__
 db.sqlite3
 media
 
+
+gcloud.json
+gcloud*
+
 # Backup files # 
 *.bak 
 
