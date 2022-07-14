@@ -2,6 +2,8 @@
 *.log
 *.pot
 *.pyc
+cepad/__*
+cepad/*.pyc 
 __pycache__
 web/__pycache__
 db.sqlite3

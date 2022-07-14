@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+from google.oauth2 import service_account
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -116,29 +117,63 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+
+
 BOOTSTRAP3 = {'include_jquery': True}
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATIC_URL = '/static/'
 
-MEDIA_URL = '/img/'
 
-STATICFILES_DIR = [
-os.path.join(BASE_DIR, 'web/static')
+# GOOGLE_APPLICATION_CREDENTIALS = BASE_DIR + '\gcloud.json'
+# os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = GOOGLE_APPLICATION_CREDENTIALS
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'web/static'),
 ]
 
-MEDIA_ROOT = f'{BASE_DIR} / static/img'
+# STATICFILES_STORAGE='storages.backends.gcloud.GoogleCloudStorage'
+STATICFILES_STORAGE = 'cepad.gcsUtils.Static'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+# DEFAULT_FILE_STORAGE='storages.backends.gcloud.GoogleCloudStorage'
+DEFAULT_FILE_STORAGE = 'cepad.gcsUtils.Media'
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-GOOGLE_APPLICATION_CREDENTIALS = BASE_DIR + '\gcloud.json'
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = GOOGLE_APPLICATION_CREDENTIALS
-DEFAULT_FILE_STORAGE='storages.backends.gcloud.GoogleCloudStorage'
 GS_BUCKET_NAME='cepad_site'
-STATICFILES_STORAGE='storages.backends.gcloud.GoogleCloudStorage'
+
+# Add an unique ID to a file name if same file name exists
+GS_FILE_OVERWRITE = False
+
+GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
+    os.path.join(BASE_DIR, 'gcloud.json'),
+)
+
+
+STATIC_URL = f'https://storage.googleapis.com/{GS_BUCKET_NAME}/static/'
+
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# STATIC_URL = '/static/'
+# MEDIA_URL = '/img/'
+
+# STATICFILES_DIR = [
+# os.path.join(BASE_DIR, 'web/static')
+# ]
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_URL = '/static/'
+  
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+# MEDIA_URL = f'https://storage.googleapis.com/{GS_BUCKET_NAME}/img/'
+
+
+# MEDIA_ROOT = f'{BASE_DIR}/static/img'
+
+# # Default primary key field type
+# # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
 
 
