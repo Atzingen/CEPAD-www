@@ -6,9 +6,13 @@ cepad/__*
 cepad/*.pyc 
 __pycache__
 web/__pycache__
+
 db.sqlite3
 media
-
+web/migrations/*
+web/migrations/
+web/static/
+web/static/*
 
 gcloud.json
 gcloud*
