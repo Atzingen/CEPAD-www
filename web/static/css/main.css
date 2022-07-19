@@ -15,9 +15,10 @@ body {
   
   a {
     text-decoration: none;
-    color: #d9232d;
+    color: #e2252f;
   }
   
+
   a:hover {
     color: #e24d55;
     text-decoration: none;

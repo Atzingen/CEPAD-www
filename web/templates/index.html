@@ -55,9 +55,10 @@
         <ul>
           <li class="dropdown"><a href="index.html"><span>Home</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="about.html" class="active">Sobre</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="#about" class="active">Sobre</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#team">Team</a></li>
+              
 
              
             </ul>
@@ -71,7 +72,6 @@
 
             </ul>
           </li> {% endcomment %}
-          <li><a href="services.html">Services</a></li>
 
 
           <li><a href="blog.html">Blog</a></li>
@@ -99,7 +99,7 @@
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Sailor</span></h2>
               <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+              {% comment %} <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a> {% endcomment %}
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
               <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+              {% comment %} <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a> {% endcomment %}
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
               <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+              {% comment %} <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a> {% endcomment %}
             </div>
           </div>
         </div>
@@ -177,7 +177,7 @@
     <section id="clients" class="clients section-bg">
       <div class="container">
 
-        <div class="row">
+        <div class="row d-flex align-items-center justify-content-center">
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
             <img src= "{% static 'img/clients/ifsp.png' %}" class="img-fluid" alt="">
@@ -271,7 +271,7 @@
                     <a href=""><i class="ri-facebook-fill"></i></a>
                     <a href=""><i class="ri-instagram-fill"></i></a>
                     <a href=""> <i class="ri-linkedin-box-fill"></i> </a> {% endcomment %}
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    <ion-icon name="logo-linkedin" size="large"></ion-icon>
                   </div>
                     <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample0" aria-expanded="false" aria-controls="collapseExample0">
                       Ler mais
@@ -313,7 +313,7 @@
                     {% comment %} <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
                     <a href=""><i class="ri-instagram-fill"></i></a> {% endcomment %}
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    <ion-icon name="logo-linkedin" size="large"></ion-icon>
                   </div>
                     <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample0">
                       Ler mais
@@ -339,8 +339,7 @@
                     {% comment %} <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
                     <a href=""><i class="ri-instagram-fill"></i></a> {% endcomment %}
-            
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    <ion-icon name="logo-linkedin" size="large"></ion-icon>
                   </div>
                     <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample0">
                       Ler mais
@@ -366,8 +365,7 @@
                     {% comment %} <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
                     <a href=""><i class="ri-instagram-fill"></i></a> {% endcomment %}
-                    
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                      <ion-icon name="logo-linkedin" size="large"></ion-icon>
                   </div>
                     <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample0">
                       Ler mais
@@ -486,7 +484,8 @@
   <!-- JavaScript Bundle with Popper -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
