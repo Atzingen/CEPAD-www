@@ -150,6 +150,7 @@ GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
 STATIC_URL = f'https://storage.googleapis.com/{GS_BUCKET_NAME}/static/'
 
 
+
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # STATIC_URL = '/static/'
