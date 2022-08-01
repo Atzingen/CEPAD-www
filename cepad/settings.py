@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'web.apps.WebConfig',
     'bootstrap3',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -118,10 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 
-
 BOOTSTRAP3 = {'include_jquery': True}
-
-
 
 
 # GOOGLE_APPLICATION_CREDENTIALS = BASE_DIR + '\gcloud.json'
@@ -137,7 +135,7 @@ STATICFILES_STORAGE = 'cepad.gcsUtils.Static'
 # DEFAULT_FILE_STORAGE='storages.backends.gcloud.GoogleCloudStorage'
 DEFAULT_FILE_STORAGE = 'cepad.gcsUtils.Media'
 
-GS_BUCKET_NAME='cepad_site'
+GS_BUCKET_NAME = 'cepad_site'
 
 # Add an unique ID to a file name if same file name exists
 GS_FILE_OVERWRITE = False
@@ -148,7 +146,6 @@ GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
 
 
 STATIC_URL = f'https://storage.googleapis.com/{GS_BUCKET_NAME}/static/'
-
 
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -162,7 +159,7 @@ STATIC_URL = f'https://storage.googleapis.com/{GS_BUCKET_NAME}/static/'
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # STATIC_URL = '/static/'
-  
+
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIA_URL = '/media/'
 # MEDIA_URL = f'https://storage.googleapis.com/{GS_BUCKET_NAME}/img/'
@@ -174,7 +171,3 @@ STATIC_URL = f'https://storage.googleapis.com/{GS_BUCKET_NAME}/static/'
 # # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 # DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-
-
